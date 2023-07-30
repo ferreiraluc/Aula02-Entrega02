@@ -81,11 +81,12 @@ public class menuCadastro {
         }
 
         Cliente clienteSelecionado = clientes.get(numeroCliente - 1);
-        Pedidos pedidos = new Pedidos(clienteSelecionado);
-        clienteSelecionado.addPedido(pedidos);
-        Pedidos.add(pedidos);
+        Pedidos pedido = new Pedidos(clienteSelecionado);
+        clienteSelecionado.addPedido(pedido);
 
         System.out.println("Pedido vinculado ao cliente " + clienteSelecionado.getNome() + " com sucesso!");
+
+        exibirRelatorios();
     }
 
     private static void exibirRelatorios() {

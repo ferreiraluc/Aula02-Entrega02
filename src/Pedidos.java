@@ -1,12 +1,10 @@
 public class Pedidos {
     private Cliente cliente;
-
     private String status;
 
     public Pedidos(Cliente cliente) {
         this.cliente = cliente;
         this.status = "Pedido em andamento";
-
     }
 
     public void encerrarPedido() {
@@ -27,8 +25,5 @@ public class Pedidos {
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    public static void add(Pedidos pedidos) {
     }
 }

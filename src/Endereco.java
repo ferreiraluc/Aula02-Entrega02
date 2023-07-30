@@ -1,5 +1,8 @@
 public class Endereco {
 
+    private String rua;
+    private int numero;
+
     public Endereco() {
     }
 
@@ -7,9 +10,6 @@ public class Endereco {
         this.rua = rua;
         this.numero = numero;
     }
-
-    private String rua;
-    private int numero;
 
     public String getRua() {
         return rua;
@@ -26,8 +26,4 @@ public class Endereco {
     public void setNumero(int numero) {
         this.numero = numero;
     }
-
-
-
-
 }
