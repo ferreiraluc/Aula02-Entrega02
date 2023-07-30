@@ -12,12 +12,14 @@ public class menuCadastro {
         int opcao;
 
         do {
-            System.out.println("Menu:");
-            System.out.println("1. Cadastrar cliente");
-            System.out.println("2. Realizar pedido");
-            System.out.println("3. Relatórios");
-            System.out.println("4. Sair");
-            System.out.print("Escolha uma opção: ");
+            System.out.print("##------------Menu-----------##\n\n");
+            System.out.print("|-----------------------------|\n");
+            System.out.print("| Opção 1 - Cadastrar Cliente |\n");
+            System.out.print("| Opção 2 - Realizar Pedido   |\n");
+            System.out.print("| Opção 3 - Relatiorios       |\n");
+            System.out.print("| Opção 4 - Sair              |\n");
+            System.out.print("|-----------------------------|\n");
+            System.out.print("Digite uma opção: ");
             opcao = scanner.nextInt();
 
             switch (opcao) {
