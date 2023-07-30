@@ -27,5 +27,7 @@ public class Cliente {
         return enderecos;
     }
 
+    public void addPedido(Pedidos pedidos) {
+    }
 }
 
