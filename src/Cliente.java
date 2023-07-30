@@ -1,39 +1,36 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class Cliente {
-
     private String nome;
+
     private List<Endereco> enderecos;
-    private List<Pedidos> pedidos; // Adicionamos a lista de pedidos
 
-    public Cliente(String nome) {
+    public Cliente(){}
+
+
+
+    public Cliente(String nome, List<Endereco>enderecos){
         this.nome = nome;
-        this.enderecos = new ArrayList<>();
-        this.pedidos = new ArrayList<>(); // Inicializamos a lista de pedidos
+        this.enderecos = enderecos;
     }
 
-    public void addEndereco(Endereco endereco) {
-        this.enderecos.add(endereco);
-    }
-
-    public void removeEndereco(Endereco endereco) {
-        this.enderecos.remove(endereco);
+    public static void add(Cliente cliente) {
     }
 
     public String getNome() {
         return nome;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+
     public List<Endereco> getEnderecos() {
         return enderecos;
     }
 
-    public void addPedido(Pedidos pedido) {
-        this.pedidos.add(pedido);
-    }
-
-    public List<Pedidos> getPedidos() {
-        return pedidos;
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
     }
 }

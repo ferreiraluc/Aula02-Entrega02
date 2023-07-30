@@ -5,7 +5,7 @@
  
 ### Pronto
 
-- [x] Menu para cadastgro de cliente e realizacao do pedido;
+- [x] Menu para cadastro de clientes e realização dos pedidos;
 - [x] Menu para realizar o pedido e vincular ao cliente; 
 
 #### O que falta fazer?
