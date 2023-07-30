@@ -1,5 +1,3 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -32,7 +30,25 @@ public class menuCadastro {
 
                     break;
                 case 3:
-
+                    System.out.println("\n##--- Menu de Relatórios ---##");
+                    System.out.println("|-----------------------------|");
+                    System.out.println("| 1 - Relatório de Clientes   |");
+                    System.out.println("| 2 - Relatório de Pedidos    |");
+                    System.out.println("|-----------------------------|");
+                    System.out.print("Digite uma opção: ");
+                    int opcaoRelatorio = scanner.nextInt();
+                    switch (opcaoRelatorio) {
+                        case 1:
+                            Relatorio.gerarRelatorioClientes(clientes, scanner);
+                            break;
+                        case 2:
+                            List<Pedido> pedidos = new ArrayList<>();
+                            Relatorio.gerarRelatorioPedidos(pedidos);
+                            break;
+                        default:
+                            System.out.println("Opção inválida!");
+                            break;
+                    }
                     break;
                 case 4:
                     System.out.println("Saindo...");
