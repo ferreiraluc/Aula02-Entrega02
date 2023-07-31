@@ -21,14 +21,14 @@ public class RealizarPedido {
 
         System.out.println("Digite o número do cliente que deseja associar ao pedido:");
         int numCliente = scanner.nextInt();
-        scanner.nextLine(); // Limpar a quebra de linha deixada pelo nextInt()
+        scanner.nextLine();
 
         if (numCliente >= 1 && numCliente <= clientes.size()) {
             Cliente clienteSelecionado = clientes.get(numCliente - 1);
 
             System.out.println("Digite a quantidade de produtos do pedido:");
             int qtdProdutos = scanner.nextInt();
-            scanner.nextLine(); // Limpar a quebra de linha deixada pelo nextInt()
+            scanner.nextLine();
 
             List<String> produtos = new ArrayList<>();
             for (int i = 0; i < qtdProdutos; i++) {

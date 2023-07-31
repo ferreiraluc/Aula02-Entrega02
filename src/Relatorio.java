@@ -29,8 +29,9 @@ public class Relatorio {
         if (pedidos.isEmpty()) {
             System.out.println("Não há pedidos em andamento.");
         } else {
-            long pedidosEmAndamento = pedidos.stream().filter(pedido -> pedido.getStatus().equals("Em andamento")).count();
-            long pedidosEncerrados = pedidos.stream().filter(pedido -> pedido.getStatus().equals("Encerrado")).count();
+            long pedidosEmAndamento = pedidos.stream().filter(pedido -> pedido.getStatus().equalsIgnoreCase("Em andamento")).count();
+            long pedidosEncerrados = pedidos.stream().filter(pedido -> pedido.getStatus().equalsIgnoreCase("Encerrado" )).count();
+
 
             System.out.println("Quantidade de pedidos em andamento: " + pedidosEmAndamento);
             System.out.println("Quantidade de pedidos encerrados: " + pedidosEncerrados);
