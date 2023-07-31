@@ -6,14 +6,25 @@ public class Pedido {
     private List<String> produtos;
     private double valorTotal;
 
+    private String status;
+
     public Pedido(Cliente cliente, List<String> produtos, double valorTotal) {
         this.cliente = cliente;
         this.produtos = produtos;
         this.valorTotal = valorTotal;
+        this.status = "Em andamento";
     }
 
     public Cliente getCliente() {
         return cliente;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public List<String> getProdutos() {
@@ -24,5 +35,5 @@ public class Pedido {
         return valorTotal;
     }
 
-    // Outros métodos, se necessário
+
 }
