@@ -7,7 +7,7 @@ public class RealizarCadastro {
     public void RealizarCadastro(List<Cliente> clientes, Scanner scanner) {
         System.out.println("\nDigite o número de pessoas que deseja cadastrar: ");
         int qtdPessoas = scanner.nextInt();
-        scanner.nextLine(); // Limpar a quebra de linha deixada pelo nextInt()
+        scanner.nextLine();
 
         // Cadastrar pessoas com n endereços
         for (int i = 0; i < qtdPessoas; i++) {
@@ -15,7 +15,7 @@ public class RealizarCadastro {
             String nome = scanner.nextLine();
             System.out.println("Digite a quantidade de endereços: ");
             int qtdEndereco = scanner.nextInt();
-            scanner.nextLine(); // Limpar a quebra de linha deixada pelo nextInt()
+            scanner.nextLine();
 
             List<Endereco> enderecos = new ArrayList<>();
             for (int j = 0; j < qtdEndereco; j++) {
@@ -23,7 +23,7 @@ public class RealizarCadastro {
                 String rua = scanner.nextLine();
                 System.out.println("Digite o número do endereço:");
                 int numero = scanner.nextInt();
-                scanner.nextLine(); // Limpar a quebra de linha deixada pelo nextInt()
+                scanner.nextLine();
                 enderecos.add(new Endereco(rua, numero));
             }
 
@@ -55,10 +55,10 @@ public class RealizarCadastro {
             System.out.println("Digite o número do cliente cujo endereço deseja editar:");
             int numCliente = scanner.nextInt();
             if (numCliente >= 1 && numCliente <= clientes.size()) {
-                scanner.nextLine(); // Limpar a quebra de linha deixada pelo nextInt()
+                scanner.nextLine();
                 System.out.println("Digite a quantidade de endereços: ");
                 int qtdEndereco = scanner.nextInt();
-                scanner.nextLine(); // Limpar a quebra de linha deixada pelo nextInt()
+                scanner.nextLine();
 
                 List<Endereco> enderecos = new ArrayList<>();
                 for (int j = 0; j < qtdEndereco; j++) {
@@ -66,7 +66,7 @@ public class RealizarCadastro {
                     String rua = scanner.nextLine();
                     System.out.println("Digite o número do endereço:");
                     int numero = scanner.nextInt();
-                    scanner.nextLine(); // Limpar a quebra de linha deixada pelo nextInt()
+                    scanner.nextLine();
                     enderecos.add(new Endereco(rua, numero));
                 }
 

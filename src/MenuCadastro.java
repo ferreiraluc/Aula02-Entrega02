@@ -46,7 +46,7 @@ public class MenuCadastro {
         System.out.print("| Opção 1 - Clientes          |\n");
         System.out.print("| Opção 2 - Pedidos           |\n");
         System.out.print("| Opção 3 - Relatórios        |\n");
-        System.out.print("| Opção 4 - EMITIR TXT                |\n");
+        System.out.print("| Opção 4 - EMITIR TXT        |\n");
         System.out.print("| Opção 5 - Sair              |\n");
         System.out.print("|-----------------------------|\n");
         System.out.print("Digite uma opção: ");

@@ -10,7 +10,7 @@ public class Relatorio {
             System.out.println("Não há clientes cadastrados.");
         } else {
             for (int i = 0; i < clientes.size(); i++) {
-                System.out.println("Cliente " + (i + 1) + ":");
+                System.out.println("Cliente " + (i + 1) + ":------------------------------------");
                 System.out.println("Nome: " + clientes.get(i).getNome());
 
                 List<Endereco> enderecos = clientes.get(i).getEnderecos();
