@@ -20,7 +20,7 @@ public class MenuCadastro {
                     menuClientes(clientes, scanner);
                     break;
                 case 2:
-                    RealizarPedido.realizarPedido(clientes, pedidos, scanner);
+                    menuPedidos(clientes, pedidos, scanner);
                     break;
                 case 3:
                     menuRelatorios(clientes, pedidos, scanner);
@@ -96,6 +96,31 @@ public class MenuCadastro {
                 Relatorio.gerarRelatorioClientes(clientes, scanner);
                 break;
             case 2:
+                Relatorio.gerarRelatorioPedidos(pedidos);
+                break;
+            default:
+                System.out.println("Opção inválida!");
+                break;
+        }
+    }
+
+    public static void menuPedidos(List<Cliente> clientes, List<Pedido> pedidos, Scanner scanner) {
+        System.out.println("\n##--- Menu de Pedidos ---##");
+        System.out.println("|-----------------------------|");
+        System.out.println("| 1 - Realizar Pedido         |");
+        System.out.println("| 2 - Editar Status do Pedido |");
+        System.out.println("| 3 - Listar Pedidos          |");
+        System.out.println("|-----------------------------|");
+        System.out.print("Digite uma opção: ");
+        int opcaoPedidos = scanner.nextInt();
+        switch (opcaoPedidos) {
+            case 1:
+                RealizarPedido.realizarPedido(clientes, pedidos, scanner);
+                break;
+            case 2:
+                RealizarPedido.controlarStatusPedido(pedidos, scanner);
+                break;
+            case 3:
                 Relatorio.gerarRelatorioPedidos(pedidos);
                 break;
             default:
