@@ -68,7 +68,7 @@ public class MenuCadastro {
         switch (opcaoClientes) {
             case 1:
                 RealizarCadastro rc = new RealizarCadastro();
-                rc.RealizarCadastro(clientes, scanner);
+                rc.realizarCadastro(clientes, scanner);
                 break;
             case 2:
                 RealizarCadastro.removerCliente(clientes, scanner);

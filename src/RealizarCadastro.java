@@ -4,7 +4,10 @@ import java.util.Scanner;
 
 public class RealizarCadastro {
 
-    public void RealizarCadastro(List<Cliente> clientes, Scanner scanner) {
+    public RealizarCadastro() {
+    }
+
+    public void realizarCadastro(List<Cliente> clientes, Scanner scanner) {
         System.out.println("\nDigite o número de pessoas que deseja cadastrar: ");
         int qtdPessoas = scanner.nextInt();
         scanner.nextLine();
@@ -56,7 +59,10 @@ public class RealizarCadastro {
             int numCliente = scanner.nextInt();
             if (numCliente >= 1 && numCliente <= clientes.size()) {
                 scanner.nextLine();
-                System.out.println("Digite a quantidade de endereços: ");
+                Cliente cliente = clientes.get(numCliente - 1);
+                System.out.println("Cliente selecionado: " + cliente.getNome());
+
+                System.out.println("Digite a quantidade de endereços a serem editados: ");
                 int qtdEndereco = scanner.nextInt();
                 scanner.nextLine();
 
@@ -70,7 +76,7 @@ public class RealizarCadastro {
                     enderecos.add(new Endereco(rua, numero));
                 }
 
-                clientes.get(numCliente - 1).setEnderecos(enderecos);
+                cliente.setEnderecos(enderecos);
                 System.out.println("Endereço do cliente editado com sucesso.");
             } else {
                 System.out.println("Número de cliente inválido.");
