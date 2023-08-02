@@ -94,7 +94,6 @@ public class RealizarPedido {
                     }
                 }
 
-
                 pedidoSelecionado.setStatus(novoStatus); // Alterando o status do pedido
 
                 System.out.println("Status do pedido atualizado com sucesso!");
