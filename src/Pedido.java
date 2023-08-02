@@ -8,6 +8,7 @@ public class Pedido {
 
     private String status;
 
+
     public Pedido(Cliente cliente, List<String> produtos, double valorTotal) {
         this.cliente = cliente;
         this.produtos = produtos;

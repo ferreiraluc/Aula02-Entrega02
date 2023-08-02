@@ -7,6 +7,10 @@ import java.util.Scanner;
 
 public class RealizarPedido {
 
+    List<Pedido> pedidos;
+    List<Cliente> clientes;
+    List<Endereco> enderecos;
+
     public static void realizarPedido(List<Cliente> clientes, List<Pedido> pedidos, Scanner scanner) {
         System.out.println("\n--- Realizar Pedido ---");
 
@@ -71,16 +75,18 @@ public class RealizarPedido {
                 System.out.println("Digite o novo status do pedido:");
                 String novoStatus = scanner.nextLine();
 
+
+                // Código existente para gravar os pedidos em arquivo
                 if (novoStatus.equalsIgnoreCase("Encerrado")) {
                     String filename = "pedido" + numPedido + ".txt";
 
                     try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
                         for (Pedido pedido : pedidos) {
-                            writer.write("Pedido " + pedido + ": -------------------------------------------");
+                            writer.write("Pedido " + numPedido + ": -------------------------------------------");
                             writer.newLine();
                             writer.write("Cliente: " + pedido.getCliente().getNome());
                             writer.newLine();
-                            writer.write("Endereco: " + pedido.getCliente().getEnderecos());
+                            writer.write("Endereco: " + pedido.getCliente().getEnderecos().get(0).getRua() + ", " + pedido.getCliente().getEnderecos().get(0).getNumero());
                             writer.newLine();
                             writer.write("Produtos: " + pedido.getProdutos());
                             writer.newLine();

@@ -29,7 +29,7 @@ public class MenuCadastro {
                     menuRelatorios(clientes, pedidos, scanner);
                     break;
                 case 4:
-                    // EMITIR TXT
+                    menuPedidos(clientes, pedidos, scanner);
                     break;
                 case 5:
                     System.out.println("Saindo...");
@@ -49,7 +49,7 @@ public class MenuCadastro {
         System.out.print("| Opção 1 - Clientes          |\n");
         System.out.print("| Opção 2 - Pedidos           |\n");
         System.out.print("| Opção 3 - Relatórios        |\n");
-        System.out.print("| Opção 4 - EMITIR TXT        |\n");
+        System.out.print("| Opção 4 - Finalizar Pedidos |\n");
         System.out.print("| Opção 5 - Sair              |\n");
         System.out.print("|-----------------------------|\n");
         System.out.print("Digite uma opção: ");
