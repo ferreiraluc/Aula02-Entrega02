@@ -2,9 +2,9 @@ import java.util.List;
 
 public class Pedido {
 
-    private Cliente cliente;
-    private List<String> produtos;
-    private double valorTotal;
+    private final Cliente cliente;
+    private final List<String> produtos;
+    private final double valorTotal;
 
     private String status;
 
