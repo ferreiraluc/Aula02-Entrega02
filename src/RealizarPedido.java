@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -51,7 +54,7 @@ public class RealizarPedido {
         }
     }
 
-    public static void controlarStatusPedido(List<Pedido> pedidos, Scanner scanner) {
+    public static void controlarStatusPedido(List<Pedido> pedidos, Scanner scanner) throws IOException {
         System.out.println("\n--- Controlar Status do Pedido ---");
         if (pedidos.isEmpty()) {
             System.out.println("Não há pedidos em andamento.");
@@ -67,6 +70,30 @@ public class RealizarPedido {
 
                 System.out.println("Digite o novo status do pedido:");
                 String novoStatus = scanner.nextLine();
+
+                if (novoStatus.equalsIgnoreCase("Encerrado")) {
+                    String filename = "pedido" + numPedido + ".txt";
+
+                    try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
+                        for (Pedido pedido : pedidos) {
+                            writer.write("Pedido " + pedido + ": -------------------------------------------");
+                            writer.newLine();
+                            writer.write("Cliente: " + pedido.getCliente().getNome());
+                            writer.newLine();
+                            writer.write("Endereco: " + pedido.getCliente().getEnderecos());
+                            writer.newLine();
+                            writer.write("Produtos: " + pedido.getProdutos());
+                            writer.newLine();
+                            writer.write("Valor Total: " + pedido.getValorTotal());
+                            writer.newLine();
+                            writer.newLine(); // Add an extra newline to separate the next "Pedido"
+                        }
+                        System.out.println("Pedidos gravados com sucesso!");
+                    } catch (IOException e) {
+                        System.err.println("Erro ao gravar os pedidos no arquivo: " + e.getMessage());
+                    }
+                }
+
 
                 pedidoSelecionado.setStatus(novoStatus); // Alterando o status do pedido
 

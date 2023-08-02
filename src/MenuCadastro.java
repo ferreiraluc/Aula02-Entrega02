@@ -1,10 +1,13 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class MenuCadastro {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         List<Cliente> clientes = new ArrayList<>();
         List<Pedido> pedidos = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -104,7 +107,7 @@ public class MenuCadastro {
         }
     }
 
-    public static void menuPedidos(List<Cliente> clientes, List<Pedido> pedidos, Scanner scanner) {
+    public static void menuPedidos(List<Cliente> clientes, List<Pedido> pedidos, Scanner scanner) throws IOException{
         System.out.println("\n##--- Menu de Pedidos ---##");
         System.out.println("|-----------------------------|");
         System.out.println("| 1 - Realizar Pedido         |");
