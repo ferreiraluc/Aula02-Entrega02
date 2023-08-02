@@ -7,10 +7,6 @@ import java.util.Scanner;
 
 public class RealizarPedido {
 
-    List<Pedido> pedidos;
-    List<Cliente> clientes;
-    List<Endereco> enderecos;
-
     public static void realizarPedido(List<Cliente> clientes, List<Pedido> pedidos, Scanner scanner) {
         System.out.println("\n--- Realizar Pedido ---");
 
