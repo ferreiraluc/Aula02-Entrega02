@@ -22,8 +22,6 @@ public class Relatorio {
         }
     }
 
-
-
     public static void gerarRelatorioPedidos(List<Pedido> pedidos) {
         System.out.println("\n--- Relatório de Pedidos ---");
         if (pedidos.isEmpty()) {

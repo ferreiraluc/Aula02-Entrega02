@@ -1,0 +1,6 @@
+Pedido Pedido@ae45eb6: -------------------------------------------
+Cliente: lucas
+Endereco: [Endereco@1bce4f0a]
+Produtos: [pizza]
+Valor Total: 100.0
+
